@@ -1,0 +1,136 @@
+.input {
+  width: 95%;
+  position: relative;
+  display: flex;
+  border-radius: 100px;
+  align-items: center;
+}
+
+.inputBox {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  border: none;
+  transition: 0.25s;
+  box-shadow: inset 0 0 5px black;
+}
+
+.inputBox:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.add_btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 50px;
+  right: 0px;
+  font-size: 12px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+.add_btn:hover {
+  background-color: #388ae2;
+  cursor: pointer;
+}
+
+.add_btn:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5 black;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 10px;
+}
+
+.todos {
+  display: flex;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(50, 195, 205);
+}
+
+.todos_heading {
+  font-size: 30px;
+  color: white;
+}
+
+.single_todo {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+}
+
+.single_todo:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
+}
+
+.single_todo_text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.single_todo_text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 95%;
+    flex-direction: column;
+  }
+}
+
+.remove {
+  background-color: rgb(235, 103, 80);
+}
+
+.dragactive {
+  background-color: rgb(0, 221, 236);
+}
+
+.dragcomplete {
+  background-color: rgb(255, 38, 0);
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
